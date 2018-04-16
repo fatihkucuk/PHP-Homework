@@ -57,15 +57,31 @@ $CustomerNo = Db::getMaxCustomerNo();
   </fieldset>
 
   <div class="form-group row">
-    <label class="col-xs-3 col-sm-3 col-form-label">Date of Birth:</label> 
-      <select class="col-xs-3 col-sm-3 form-control" id="days" name="day"></select>
-      <select class="col-xs-3 col-sm-3 form-control" id="months" name="month"></select>
-      <select class="col-xs-3 col-sm-3 form-control" id="years" name="year"></select>
+  <div class="col-sm-3 col-form-label">
+  <label >Date of Birth:</label> 
+  </div>
+    <div class="col-sm-3">
+    <select class=" form-control" id="days" name="day"></select>
+
+    </div>
+    <div class="col-sm-3">
+    <select class="form-control" id="months" name="month"></select>
+
+    </div>
+    <div class="col-sm-3">
+          <select class=" form-control" id="years" name="year"></select>
+
+    </div>
   </div>
 
   <div class="form-group row">
-    <label class="col-xs-3 col-sm-3 col-form-label">State:</label> 
-      <select class="col-xs-9 col-sm-9 form-control" id="state" name="state">
+  <div class="col-sm-3 col-form-label">
+  <label >State:</label> 
+
+  </div>
+    <div class="col-sm-9">
+    
+      <select class="form-control" id="state" name="state">
         <option value="Alabama">Alabama</option>
         <option value="Alaska">Alaska</option>
         <option value="Arizona">Arizona</option>
@@ -116,6 +132,7 @@ $CustomerNo = Db::getMaxCustomerNo();
         <option value="Wisconsin">Wisconsin</option>
         <option value="Wyoming">Wyoming</option>
       </select>
+      </div>
   </div>
 
   <div class="form-group row">
