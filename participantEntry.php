@@ -173,7 +173,7 @@ $CustomerNo = Db::getMaxCustomerNo();
   <div class="form-group row">
         <label for="bib" class="col-sm-3 col-form-label">Customer Number:</label>
         <div class="col-sm-9">
-          <input type="text" class="form-control" id="customerNo" disabled name="customerNo">
+          <input type="text" class="form-control" id="customerNo"  name="customerNo" disabled>
         </div>
   </div>
 

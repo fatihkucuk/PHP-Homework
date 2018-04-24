@@ -16,7 +16,7 @@ $Zip = stripslashes($_POST['zip']);
 $Address = stripslashes($_POST['address']);
 $Phone = stripslashes($_POST['phone']);
 $Email = stripslashes($_POST['email']);
-$CustomerNo = stripslashes($_POST['customerNo']);
+$CustomerNo = Db:: getMaxCustomerNo();
 
 Db::insertCustomer($CustomerNo, $FirstName, $LastName, $DateOfBirth,
 $Gender, $State, $City, $Zip, $Address, $Email, $Phone);
