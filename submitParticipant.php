@@ -10,7 +10,7 @@ $Gender = stripslashes($_POST['gender']);
 
 $DateOfBirth = $Year . "-" . $Month . "-" . $Day;
 
-$State = stripslashes($_POST['state']);
+// $State = stripslashes($_POST['state']);
 $City = stripslashes($_POST['city']);
 $Zip = stripslashes($_POST['zip']);
 $Address = stripslashes($_POST['address']);
@@ -18,7 +18,10 @@ $Phone = stripslashes($_POST['phone']);
 $Email = stripslashes($_POST['email']);
 $CustomerNo = Db:: getMaxCustomerNo();
 
+// Db::insertCustomer($CustomerNo, $FirstName, $LastName, $DateOfBirth,
+// $Gender, $State, $City, $Zip, $Address, $Email, $Phone);
+
 Db::insertCustomer($CustomerNo, $FirstName, $LastName, $DateOfBirth,
-$Gender, $State, $City, $Zip, $Address, $Email, $Phone);
+$Gender, $City, $Zip, $Address, $Email, $Phone);
 ?>
 

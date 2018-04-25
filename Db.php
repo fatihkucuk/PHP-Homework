@@ -13,19 +13,19 @@ class Db {
         return $connection;
     }
 
-    public static function insertCustomer($CustomerNo, $FirstName, $LastName, $DateOfBirth, $Gender, $State, $City, $Zip, $Address, $Email, $Phone) {
+    public static function insertCustomer($CustomerNo, $FirstName, $LastName, $DateOfBirth, $Gender, $City, $Zip, $Address, $Email, $Phone) {
         // connect to the database
         $connection = self::connect();
         
         // prepare and validate the statement
-        $insertStatement = $connection->prepare("INSERT INTO customer(Customer_No, First_Name, Last_Name, Birth_Date, Gender, State, City, Zip, Address, Email, Phone) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
+        $insertStatement = $connection->prepare("INSERT INTO customer(Customer_No, First_Name, Last_Name, Birth_Date, Gender, City, Zip, Address, Email, Phone) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
         if($insertStatement === FALSE) {
             exit("Prepared statement failed with the following error description: " . htmlspecialchars($connection->error));
         }
 
         //prepare and validate the binding parameters
-        $dataTypes = "issssssssss";
-        $result = $insertStatement->bind_param($dataTypes, $CustomerNo, $FirstName, $LastName, $DateOfBirth, $Gender, $State, $City, $Zip, $Address, $Email, $Phone);
+        $dataTypes = "isssssssss";
+        $result = $insertStatement->bind_param($dataTypes, $CustomerNo, $FirstName, $LastName, $DateOfBirth, $Gender, $City, $Zip, $Address, $Email, $Phone);
         if ($result === FALSE) {
             exit("Binded Parameters failed.");
         }

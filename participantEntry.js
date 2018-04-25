@@ -22,7 +22,6 @@ function validateFields() {
     var noLetters = /^[0-9-+()]*$/;
     // Zip format: 55555 OR 55555-5555
     var zipRegex = /(^\d{5}$)|(^\d{5}-\d{4}$)/;
-    var noSpecialChars = /^[\s0-9A-Za-z]+$/;
     var emailRegex = /(.+)@(.+){2,}\.(.+){2,}$/;
     
     var customerNo = document.getElementById("customerNo").value;  
@@ -88,11 +87,7 @@ function validateFields() {
         window.alert("Zip should be with 12345 OR 12345-1234 format.");
         return false;
     }
-    //address validation
-    if (!address.match(noSpecialChars)) {
-        window.alert("Address is required and it should not have special characters.");
-        return false;
-    }
+
     //phone validation
     if (phone == "" || phone == null) {
         window.alert("Phone is required.");

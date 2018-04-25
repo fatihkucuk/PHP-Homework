@@ -23,33 +23,39 @@ $CustomerNo = Db::getMaxCustomerNo();
 
 <form style="margin-top:20px;" method="POST" action="submitParticipant.php">
 <div class="container">
-  <div class="form-group row">
-    <label for="txtFirstName" class="col-sm-3 col-form-label">First Name:</label>
+<h3>Müşteri Kayıt Formu</h3>
+<hr>
+
+
+  <div class="form-group row" style="margin-top: 25px"  >
+    <label for="txtFirstName" class="col-sm-3 col-form-label">Ad:</label>
     <div class="col-sm-9">
-      <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First name">
+      <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Ad">
     </div>
   </div>
+
+
   <div class="form-group row">
-    <label for="txtLastName" class="col-sm-3 col-form-label">Last Name:</label>
+    <label for="txtLastName" class="col-sm-3 col-form-label">Soyad:</label>
     <div class="col-sm-9">
-      <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last name">
+      <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Soyad">
     </div>
   </div>
 
   <fieldset class="form-group">
     <div class="row">
-      <legend class="col-form-label col-sm-3 pt-0">Gender:</legend>
+      <legend class="col-form-label col-sm-3 pt-0">Cinsiyet:</legend>
       <div class="col-sm-9">
         <div class="form-check">
           <input class="form-check-input" type="radio" name="gender" id="radMale" value="male">
           <label class="form-check-label" for="radMale">
-            Male
+            Bay
           </label>
         </div>
         <div class="form-check">
           <input class="form-check-input" type="radio" name="gender" id="radFemale" value="female">
           <label class="form-check-label" for="radFemale">
-            Female
+            Bayan
           </label>
         </div>
       </div>
@@ -58,7 +64,7 @@ $CustomerNo = Db::getMaxCustomerNo();
 
   <div class="form-group row">
   <div class="col-sm-3 col-form-label">
-  <label >Date of Birth:</label> 
+  <label >Doğum Tarihi:</label> 
   </div>
     <div class="col-sm-3">
     <select class=" form-control" id="days" name="day"></select>
@@ -74,92 +80,34 @@ $CustomerNo = Db::getMaxCustomerNo();
     </div>
   </div>
 
-  <div class="form-group row">
-  <div class="col-sm-3 col-form-label">
-  <label >State:</label> 
 
-  </div>
-    <div class="col-sm-9">
-    
-      <select class="form-control" id="state" name="state">
-        <option value="Alabama">Alabama</option>
-        <option value="Alaska">Alaska</option>
-        <option value="Arizona">Arizona</option>
-        <option value="California">California</option>
-        <option value="Colorado">Colorado</option>
-        <option value="Connecticut">Connecticut</option>
-        <option value="Delaware">Delaware</option>
-        <option value="Florida">Florida</option>
-        <option value="Georgia">Georgia</option>
-        <option value="Hawaii">Hawaii</option>
-        <option value="Idaho">Idaho</option>
-        <option value="Illinois">Illinois</option>
-        <option value="Indiana">Indiana</option>
-        <option value="Iowa">Iowa</option>
-        <option value="Kansas">Kansas</option>
-        <option value="Kentucky">Kentucky</option>
-        <option value="Louisiana">Louisiana</option>
-        <option value="Maine">Maine</option>
-        <option value="Maryland">Maryland</option>
-        <option value="Massachusetts">Massachusetts</option>
-        <option value="Michigan">Michigan</option>
-        <option value="Minnesota">Minnesota</option>
-        <option value="Mississippi">Mississippi</option>
-        <option value="Missouri">Missouri</option>
-        <option value="Montana">Montana</option>
-        <option value="Nebraska">Nebraska</option>
-        <option value="Nevada">Nevada</option>
-        <option value="New Hampshire">New Hampshire</option>
-        <option value="New Jersey">New Jersey</option>
-        <option value="New Mexico">New Mexico</option>
-        <option value="New York">New York</option>
-        <option value="North Carolina">North Carolina</option>
-        <option value="North Dakota">North Dakota</option>
-        <option value="Ohio">Ohio</option>
-        <option value="Oklahoma">Oklahoma</option>
-        <option value="Oregon">Oregon</option>
-        <option value="Pennsylvania">Pennsylvania</option>
-        <option value="Rhode Island">Rhode Island</option>
-        <option value="South Carolina">South Carolina</option>
-        <option value="South Dakota">South Dakota</option>
-        <option value="Tennessee">Tennessee</option>
-        <option value="Texas">Texas</option>
-        <option value="Utah">Utah</option>
-        <option value="Vermont">Vermont</option>
-        <option value="Virginia">Virginia</option>
-        <option value="Washington">Washington</option>
-        <option value="West Virginia">West Virginia</option>
-        <option value="Wisconsin">Wisconsin</option>
-        <option value="Wyoming">Wyoming</option>
-      </select>
-      </div>
-  </div>
+ 
 
   <div class="form-group row">
-        <label for="city" class="col-sm-3 col-form-label">City:</label>
+        <label for="city" class="col-sm-3 col-form-label">Şehir:</label>
         <div class="col-sm-9">
-          <input type="text" class="form-control" id="city" name="city" placeholder="City">
+          <input type="text" class="form-control" id="city" name="city" placeholder="Şehir">
         </div>
   </div>
 
   <div class="form-group row">
-        <label for="zip" class="col-sm-3 col-form-label">Zip Code:</label>
+        <label for="zip" class="col-sm-3 col-form-label">Posta Kodu:</label>
         <div class="col-sm-9">
-          <input type="text" class="form-control" id="zip" name="zip" placeholder="Zip Code Example: 52556 OR 52556-6525">
+          <input type="text" class="form-control" id="zip" name="zip" placeholder="Posta Kodu Örn: 52556 veya 52556-6525">
         </div>
   </div>
 
   <div class="form-group row">
-        <label for="address" class="col-sm-3 col-form-label">Address:</label>
+        <label for="address" class="col-sm-3 col-form-label">Adres:</label>
         <div class="col-sm-9">
-          <input type="text" class="form-control" id="address" name="address" placeholder="Address Example : 205 E Broadway Avenue">
+          <input type="text" class="form-control" id="address" name="address" placeholder="Adres Örn: Barbaros Cad. No:25">
         </div>
   </div>
 
   <div class="form-group row">
-        <label for="phone" class="col-sm-3 col-form-label">Phone Number:</label>
+        <label for="phone" class="col-sm-3 col-form-label">Telefon No:</label>
         <div class="col-sm-9">
-          <input type="text" class="form-control" id="phone" name="phone" placeholder="Phone">
+          <input type="text" class="form-control" id="phone" name="phone" placeholder="Telefon No">
         </div>
   </div>
 
@@ -171,7 +119,7 @@ $CustomerNo = Db::getMaxCustomerNo();
   </div>
 
   <div class="form-group row">
-        <label for="bib" class="col-sm-3 col-form-label">Customer Number:</label>
+        <label for="bib" class="col-sm-3 col-form-label">Müşteri No:</label>
         <div class="col-sm-9">
           <input type="text" class="form-control" id="customerNo"  name="customerNo" disabled>
         </div>
@@ -179,15 +127,15 @@ $CustomerNo = Db::getMaxCustomerNo();
 
   <div class="form-group row">
     <div class="col-sm-10">
-      <button id="submitButton" type="submit" class="btn btn-primary" onclick="return validateFields()">Submit Participant</button>
+      <button id="submitButton" type="submit" class="btn btn-primary" onclick="return validateFields()">Kaydet</button>
     </div>
+  </div>
   </div>
 
 </form>
 <br>
 
 
-</div>
 
 <script>
 var customerNo = <?php echo json_encode($CustomerNo); ?>;
